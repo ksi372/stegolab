@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
-const API = "http://127.0.0.1:8000";
+const API =
+  import.meta.env.VITE_API_BASE_URL?.trim() || "http://127.0.0.1:8000";
 
 // ─── Default cover text (30+ adjectives for ample capacity) ─────────────────
 const DEFAULT_COVER = `The very bright morning sky stretched over an incredibly vast and ancient landscape. A really calm river wound through the quite narrow valley, carrying fresh mountain water past the old stone bridge. Tall green trees lined the gentle slopes on either side, their dense canopy casting cool shadow over the rough path below. A fairly strong wind swept across the open fields, bending the wild grass in slow and graceful waves. The distant mountains appeared sharp and clear against the pure white sky, their ancient peaks still covered in fresh snow. Every quiet village along the route had its own rich and delicate character, with colorful wooden shutters and clean cobblestone streets. It was an extremely peaceful and beautiful world, full of vivid and unusual detail.`;
